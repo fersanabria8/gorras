@@ -1,0 +1,2 @@
+1.Creamos CartContexty usamos hook useContext() y pasamos el contexto al componente CartContext.Provider
+2.En nuestro ItemListContainer pasamos nuestro array de objetos, y le pasamos el componente ItemList por props.

@@ -1,0 +1,25 @@
+.card__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  border: 2px solid red;
+  margin: 0 auto;
+  background-color: white;
+
+}
+.card_wrapper{
+  
+}
+.card__container img {
+  width: 200px;
+}
+
+.card__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

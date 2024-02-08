@@ -1,0 +1,27 @@
+.navbar__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #09793f;
+  border-bottom: 1px solid white;
+}
+
+.navbar__container img{
+  width: 50px;
+}
+
+.navbar__list{
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__list a{
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+  color: white;
+}
+

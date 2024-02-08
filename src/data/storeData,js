@@ -1,0 +1,30 @@
+export const storeData = [
+  {
+    id:1,
+    name:'Gorra Negra',
+    price: 1500,
+    image:'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSm7bd8rxcFFw1T8H4DN2J0J91IaFb1s5vDpILBYunUmlwrkiIUMv_JBl4MDXYWerr3ZQuV7MBY6pHjw5FfxO5Plt5OmM2RsJQNgKtcZcKP0-LZCYTGeSJrIA&usqp=CAE',
+    amount:1,
+  },
+  {
+    id:2,
+    name:'Gorra Verde',
+    price: 1700,
+    image:'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTyArXZ7GOw7Txrwo5jYAQLeUAjrhP63Un6ECejRWxtqifzGAGsQ4SGv40aXq3RPoqBcgm-QTPQX7nzDwcKS9RPc8_ia2VW731_IwlwMRmLKvW1MAsNTkVC&usqp=CAE',
+    amount:1,
+  },
+  {
+    id:3,
+    name:'Gorra Amarrilla',
+    price:2000,
+    image:'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS9fRrbUSZKbQunTMoSK-UoyaUtP7dBIJnJZEOia9GHKChrdkDBmIdjUNRidCHXsC2mHKFfSl6hddkPHYUDeDms-aR8zBxP8rj_zvpr-VE2CtvhhtAtHL2HSQ&usqp=CAE',
+    amount:1,
+  },
+  {
+    id:4,
+    name:'Gorra Bordo',
+    price:3000,
+    image:'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSZiATlEjHlFyNLssg8yVpZLA1TxVxQnL39HtYdAHDtgR_rihiVe1oJnI7qZ0BpYFwIglzEaH8QoxB76n__YeC57573H6s_KEMKotRiA6B9x_Y2tVKMSTJ0nA&usqp=CAE',
+    amount:1,
+  }
+]
