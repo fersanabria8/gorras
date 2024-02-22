@@ -9,6 +9,8 @@
 
 .navbar__container img{
   width: 50px;
+
+  
 }
 
 .navbar__list{
@@ -25,3 +27,77 @@
   color: white;
 }
 
+.navbar__container .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+.navbar__container .menu span{
+  height: 6px;
+  width: 100%;
+  border-radius: 0.2rem;
+  background-color: #FFFFFF;
+}
+
+
+@media (max-width: 500px) {
+  .navbar__container .menu {
+    display: flex;
+  }
+  .navbar__container {
+    flex-direction: column;
+    align-items: start;
+    display: flex;
+    /* gap: 1rem; */
+    padding: 0.5rem;
+  }
+  .navbar__container ul {
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto;
+    /* margin-bottom: 0.25rem; */
+  }
+
+  .navbar__list a{
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+
+
+  .navbar__container ul.open{
+    display: flex;
+  }
+
+  .navbar__container ul li {
+    width: 100%;
+    text-align: center;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.2rem 0.5rem;
+    border-radius: 5px;
+    flex-direction: column;
+  }
+  .navbar__container ul li a{
+    margin: 0.2rem 0.5rem;
+  }
+
+  .navbar__container img{
+    width: 50px;
+    margin-right: 270px;
+    
+  }
+  
+}

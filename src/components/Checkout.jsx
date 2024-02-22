@@ -4,6 +4,8 @@ import { collection, addDoc, Timestamp, doc, updateDoc } from 'firebase/firestor
 import { db } from '../firebase/config'
 import emailjs from '@emailjs/browser'
 import { useForm } from '../hooks/useForm'
+import '../styles/Checkout.css'
+
 
 const Checkout = () => {
 

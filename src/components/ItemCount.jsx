@@ -1,8 +1,9 @@
-import { initializeApp } from 'firebase/app';
+// import { initializeApp } from 'firebase/app';
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import '../styles/ItemCount.css'
 
-const ItemCount = ({initial, onAdd}) => {
+const ItemCount = ({initial, onAdd, descripcion}) => {
 
   const [contador, setContador] = useState(1);
   const [condicionBoton, setCondicionBoton] = useState(false);
@@ -25,23 +26,31 @@ const ItemCount = ({initial, onAdd}) => {
 
 
   return (
-    <div>
-      <button disabled={condicionBoton} onClick={resta}>-</button>
-      <p>{contador}</p>
-      <button disabled={condicionBoton} onClick={suma}>+</button>
-      <button disabled={condicionBoton} onClick={handleClick}>Agregar al carrito</button>
+    <div className='count__container'>
+      <div className="detail__text">
+        <h3>Gorra</h3>
+        <p>{descripcion}</p>
+      </div>
+      <div className='count__button'>
+        <button disabled={condicionBoton} onClick={resta}>-</button>
+        <p>{contador}</p>
+        <button disabled={condicionBoton} onClick={suma}>+</button>
+      </div>
+        <button className='count__button_add' disabled={condicionBoton} onClick={handleClick}>Agregar al carrito</button>
       {
-        condicionBoton && <>
+        condicionBoton && 
+        <div className='count__nextbutton'>
           <NavLink to="/productos">
-            <button type='button'>Seguir Comprando</button>
+            <button className='count__button_add' type='button'>Seguir Comprando</button>
           </NavLink>
           <NavLink to={"/carrito"}>
-            <button type='button'>Finalizar Compra</button>
+            <button className='count__button_add' type='button'>Finalizar Compra</button>
           </NavLink>
-      </>
+      </div>
       }
-      {!condicionBoton && <p>Agregue productos al carrito</p>}
+      {!condicionBoton && <p>¡Agregue productos al carrito!</p>}
     </div>
+    
   )
 }
 

@@ -3,12 +3,15 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { db } from '../firebase/config'
 import ItemDetail from './ItemDetail'
+import '../styles/ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
 
   const [loading, setLoading] = useState(true)
   const [gorraDetail, setGorraDetail] = useState({})
   const id = useParams().id;
+
+  console.log(id)
 
 
   useEffect(() => {

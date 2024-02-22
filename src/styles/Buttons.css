@@ -1,0 +1,67 @@
+.buttons__container{
+  display: flex;
+  width: 90%;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buttons__container > button{
+  border: none;
+  width: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+.buttons__container > button:hover{
+  border: none;
+  width: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 5px;
+  background-color: orange;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 890px) {
+  .buttons__container{
+    display: flex;
+    width: 70%;
+    margin: 30px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .buttons__container > button{
+    border: none;
+    /* width: 80px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+  
+  }
+  
+  
+}

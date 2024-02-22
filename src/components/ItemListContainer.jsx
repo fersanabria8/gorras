@@ -6,16 +6,17 @@ import { db } from '../firebase/config';
 import { collection, getDocs, where, query } from 'firebase/firestore';
 
 const ItemListContainer = () => {
-  const [gorra, setGorra] = useState([]) //array vacio.
+  const [gorras, setGorras] = useState([]) //array vacio.
   const [loading, setLoading] = useState(true)
   const categoria = useParams().categoria;
+
 
   useEffect(() => {
     const productosRef = collection(db, 'gorras');
     const q = categoria ? query(productosRef, where('categoria', '==', categoria)) : productosRef;
     getDocs(q)
       .then((resp) => {
-        setGorra(
+        setGorras(
           resp.docs.map((doc) => {
             return {...doc.data(), id: doc.id}
           }))
@@ -29,7 +30,7 @@ const ItemListContainer = () => {
   return (
     <>
       {categoria && <h2 className='categoria'>Categoria: {categoria}</h2>}
-      { loading ? <h1>Cargando...</h1> : <ItemList product={gorra} /> }
+      { loading ? <h1>Cargando...</h1> : <ItemList productos={gorras} categoria={categoria} />}
     </>
 
   )
