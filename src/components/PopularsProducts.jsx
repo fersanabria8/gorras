@@ -42,8 +42,13 @@ const PopularsProducts = ({ productos }) => {
   if (error) return <div>Error: {error}</div>;
 
   return (
+    <>
+
     <div className='container__popularproduct animate__animated animate__bounce'>
-      <h2><span>Populars</span> Products</h2>
+      <div className='title'>
+        <h2><span>Populars</span> Products</h2>
+        
+      </div>
       {gorrasP.map((gor) => (
         <NavLink to='/productos' key={gor.id}>
           <div className='card__popularproduct'>
@@ -54,6 +59,7 @@ const PopularsProducts = ({ productos }) => {
         </NavLink>
       ))}
     </div>
+    </>
     // <div>
     //   <h2><span>Populars</span> Products</h2>
       

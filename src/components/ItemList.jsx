@@ -33,7 +33,7 @@ const ItemList = ({productos, categoria}) => {
       filterPopular={filterPopular}
       productos={productos}
     />
-    <div className='itemlist__container  animate__animated animate__bounce '>
+    <div className='itemlist__container  animate__animated animate__pulse '>
       {
         menuItem.map(prod => 
           <Item 
