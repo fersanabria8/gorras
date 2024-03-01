@@ -4,8 +4,10 @@ import { db } from '../firebase/config';
 import { NavLink } from 'react-router-dom';
 import '../styles/PopularsProducts.css'
 
-const PopularsProducts = () => {
-  const [gorrasP, setGorrasP] = useState([])
+const PopularsProducts = ({ productos }) => {
+  // const [gorrasP, setGorrasP] = useState([]) //viejo que si utilizo
+
+  const [gorrasP, setGorrasP] = useState(productos) // prueba nueva
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -40,17 +42,22 @@ const PopularsProducts = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className='container__popularproduct'>
+    <div className='container__popularproduct animate__animated animate__bounce'>
       <h2><span>Populars</span> Products</h2>
       {gorrasP.map((gor) => (
         <NavLink to='/productos' key={gor.id}>
           <div className='card__popularproduct'>
             <img src={gor.imagenURL} alt="fotos" />
+            {/* {`/productos/${gor.id}`} */} 
             <h3>{gor.nombre}</h3>
           </div>
         </NavLink>
       ))}
     </div>
+    // <div>
+    //   <h2><span>Populars</span> Products</h2>
+      
+    // </div>
   )
 }
 

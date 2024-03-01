@@ -4,11 +4,8 @@ import { CartContext } from '../context/CartContext'
 import { NavLink } from 'react-router-dom'
 
 
-const Cart = ({ suma, resta, contador, setContador }) => {
+const Cart = () => {
   const { cartList, vaciarCarrito, precioTotal,  } = useContext(CartContext)
-
-
-
 
   return (
     <>

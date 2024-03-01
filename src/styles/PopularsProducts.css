@@ -2,8 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 100%;
+  margin: 20px auto;
 }
 
 .card__popularproduct{
@@ -26,4 +28,47 @@
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .container__popularproduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: red; */
+  }
+  
+  .card__popularproduct{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    /* gap: 20px;
+    width: 200px;
+    height: 300px; */
+    /* background-color: white; */
+    /* border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px; */
+  }
+  
+  .card__popularproduct img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
+  
+  }
 }
